@@ -7,9 +7,10 @@
     </head>
     <body>
         <section>
-            <div class="heart-box">
-              <div class="circle-left"></div>
-              <div class="circle-right"></div>
+          <div class="heart-box"></div>
+              <div class="circle left"></div>
+              <div class="circle right"></div>
+              <div class="bottom"></div>
             </div>
           <style>
             .heart-box {
@@ -19,6 +20,31 @@
                 border-radius: 50px;
                 position: relative;
             }
+            .circle{
+                height:100px;
+                width:100px;
+                background-color: red;
+                border-radius: 50px;
+                position: absolute;
+                top:20px;
+            }
+            .right {               
+                right:15px;
+            }
+            .left {
+                left:15px;
+            }
+            .bottom {
+              width: 120px;
+              height:120px;
+              background-color: red;
+              position: absolute;
+              top:30px;
+              left:40px;
+              transform:rotate(45deg);
+              border-radius:10px;
+            }
+           
           </style>  
         </section>
     </body>
