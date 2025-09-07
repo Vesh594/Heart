@@ -6,17 +6,45 @@
         <title>Heart</title>
     </head>
     <body>
-        <section>
+      <section>
+        <div class="black-square">
           <div class="heart"></div>
-              
+        </div>    
           <style>
+            .black-square {
+             width: 200px; /* size of the square */
+             height: 200px;
+             background: black; /* black color */
+             border-radius: 20px;
+             display: flex;  /* to center the heart inside */
+             justify-content: center;
+             align-items: center;
+             margin: 50px auto; /* center on page */
+             position: relative; /* optional, if heart needs absolute positioning inside */
+            }
+            /* Notes:
+            -Display
+            ~Flex:Arrange child elements in a row or column
+            ~block:full width
+            ~inline:wide as it's content
+            -Justify-content
+            ~center:Center horizontally
+            ~flex-start:Align left
+            ~flex end:Align right
+            ~space-between:Equal space between elements
+            ~space-around:Equal space around elements
+            -Align-items
+            ~flex-start:Align top
+            ~flex end:Align bottom
+            ~center:Center vertically
+            ~stretch:fills container height */
            .heart {
             width: 100px;   /* makes it 100px wide */
             height: 100px;    /* makes it 100px tall */
             background: red; /* fills it with red color */
             transform: rotate(-45deg); /* rotates the square by -45 degrees */
             position: relative;
-            margin: 50px auto;
+            margin:auto;
             }
             .heart::before {
              content: "";  /* required to create a pseudo-element */
@@ -38,7 +66,14 @@
              top: 0; /* align with top of the square */
              left: 50px; /* move it to the right */
             }
+            /* Quick notes:
+-If top:0; and left:0, then the image will be at the top-left corner.
+-Both ::before and :: after are pseudo-elements
+  ->They both must be relatve to the same anchor (e.g top-left)
+  ->They both need content:""; to be visible */
           </style>  
-        </section>
+      </section>
     </body>
 </html>
+
+
