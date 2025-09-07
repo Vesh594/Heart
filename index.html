@@ -7,44 +7,37 @@
     </head>
     <body>
         <section>
-          <div class="heart-box"></div>
-              <div class="circle left"></div>
-              <div class="circle right"></div>
-              <div class="bottom"></div>
-            </div>
+          <div class="heart"></div>
+              
           <style>
-            .heart-box {
-                height: 200px;
-                width: 200px;
-                background-color: black;
-                border-radius: 50px;
-                position: relative;
+           .heart {
+            width: 100px;   /* makes it 100px wide */
+            height: 100px;    /* makes it 100px tall */
+            background: red; /* fills it with red color */
+            transform: rotate(-45deg); /* rotates the square by -45 degrees */
+            position: relative;
+            margin: 50px auto;
             }
-            .circle{
-                height:100px;
-                width:100px;
-                background-color: red;
-                border-radius: 50px;
-                position: absolute;
-                top:20px;
+            .heart::before {
+             content: "";  /* required to create a pseudo-element */
+             width: 100px;  /* same width as the square */
+             height: 100px;  /* same height as the square */
+             background: red; /* same red color */
+             border-radius: 50%;  /* makes it a circle */
+             position: absolute;  /* positions it relative to the .heart square */
+             top: -50px; /* move it upward */
+             left: 0; /* align it to the left side */
             }
-            .right {               
-                right:15px;
+            .heart::after {
+             content: "";
+             width: 100px;
+             height: 100px;
+             background: red;
+             border-radius: 50%;
+             position: absolute;
+             top: 0; /* align with top of the square */
+             left: 50px; /* move it to the right */
             }
-            .left {
-                left:15px;
-            }
-            .bottom {
-              width: 120px;
-              height:120px;
-              background-color: red;
-              position: absolute;
-              top:30px;
-              left:40px;
-              transform:rotate(45deg);
-              border-radius:10px;
-            }
-           
           </style>  
         </section>
     </body>
